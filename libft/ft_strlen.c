@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lfargeas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lfargeas <lfargeas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/09 01:14:01 by lfargeas          #+#    #+#             */
-/*   Updated: 2015/12/09 01:25:07 by lfargeas         ###   ########.fr       */
+/*   Created: 2015/11/25 15:00:25 by lfargeas          #+#    #+#             */
+/*   Updated: 2015/12/06 02:57:51 by lfargeas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include <string.h>
 
-#define BUFF_SIZE 32
-int get_next_line(int const fd, char ** line);
+size_t	ft_strlen(const char *s)
+{
+	size_t i;
 
-#endif
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}

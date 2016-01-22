@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfargeas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/09 01:14:01 by lfargeas          #+#    #+#             */
-/*   Updated: 2015/12/09 01:25:07 by lfargeas         ###   ########.fr       */
+/*   Created: 2015/12/07 02:34:46 by lfargeas          #+#    #+#             */
+/*   Updated: 2015/12/07 03:27:39 by lfargeas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-#define BUFF_SIZE 32
-int get_next_line(int const fd, char ** line);
+void	*ft_memcpy(void *s1, const void *s2, size_t n)
+{
+	size_t			i;
+	unsigned char	*ptr1;
+	unsigned char	*ptr2;
 
-#endif
+	ptr1 = (unsigned char *)s1;
+	ptr2 = (unsigned char *)s2;
+	i = 0;
+	while (i < n)
+	{
+		ptr1[i] = ptr2[i];
+		i++;
+	}
+	return (s1);
+}

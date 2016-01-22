@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lfargeas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lfargeas <lfargeas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/09 01:14:01 by lfargeas          #+#    #+#             */
-/*   Updated: 2015/12/09 01:25:07 by lfargeas         ###   ########.fr       */
+/*   Created: 2015/11/28 00:19:00 by lfargeas          #+#    #+#             */
+/*   Updated: 2015/12/07 03:55:40 by lfargeas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-#define BUFF_SIZE 32
-int get_next_line(int const fd, char ** line);
-
-#endif
+void	ft_bzero(void *s, size_t n)
+{
+	ft_memset(s, 0, n);
+}

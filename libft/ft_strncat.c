@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lfargeas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lfargeas <lfargeas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/09 03:19:19 by lfargeas          #+#    #+#             */
-/*   Updated: 2015/12/09 03:27:40 by lfargeas         ###   ########.fr       */
+/*   Created: 2015/11/28 00:49:15 by lfargeas          #+#    #+#             */
+/*   Updated: 2015/12/06 02:54:24 by lfargeas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include "libft/libft.h"
-#include <stdio.h>
+#include "libft.h"
 
-int main ()
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	char **line;
+	int i;
+	int i2;
 
-
-
-
-	return (0);
+	i = 0;
+	i2 = 0;
+	while (s1[i] != '\0')
+		i++;
+	while (s2[i2] != '\0' && i2 < (int)n)
+	{
+		s1[i] = s2[i2];
+		i++;
+		i2++;
+	}
+	s1[i] = '\0';
+	return (s1);
 }
